@@ -4,11 +4,11 @@ Dans cet atelier, nous allons utiliser comme exemple une application de gestion 
 L'application affiche un tableau d'article où vous pouvez ajouter et supprimer des articles.
 Un autre tableau affiche les articles supprimés où vous avez la possibilité de restaurer un article supprimé.
 
-L'application est composée de trois components :
+L'application est composée de trois composants :
 
 - `ArticleListComponent` : tableau pour l'affichage des articles disponibles
 - `ArticleListDeletedComponent` : tableau pour l'affichage des articles supprimés
-- `NavbarComponent` : barre de menu pour la navigation entre les components `ArticleListComponent` et `ArticleListDeletedComponent`
+- `NavbarComponent` : barre de menu pour la navigation entre les composants `ArticleListComponent` et `ArticleListDeletedComponent`
 
 ## Prérequis
 
@@ -17,25 +17,25 @@ L'application est composée de trois components :
 
 ## Partie 1
 
-**On ne tient pas compte du component `ArticleListDeletedComponent` dans cette première partie**
+**On ne tient pas compte du composant `ArticleListDeletedComponent` dans cette première partie**
 
-Actuellement le component `ArticleListComponent` manipule un tableau d'article en ajoutant, supprimant des articles.
+Actuellement le composant `ArticleListComponent` manipule un tableau d'article en ajoutant, supprimant des articles.
 Il est préférable de déporter toute manipulation de tableau, de localStorage etc dans un `Service`.
 
-- Créer un service nommé `ArticleService` dans le répertoire `common`.
-- Injecter le service `ArticleService` dans le component `ArticleListComponent`.
-- Déporter toute la logique de gestion des articles dans `ArticleService`
-- Refactoré `ArticleListComponent` afin qu'il n'y ait plus aucun `push`, `slice`, `findIndex`, `localStorage`, `JSON` etc dans ce component.
-- La manipulation d'article (`push`, `slice` ...) dans le component `ArticleListComponent` doit uniquement se faire à travers le service `ArticleService`
+- Crée un service nommé `ArticleService` dans le répertoire `common`.
+- Injecte le service `ArticleService` dans le composant `ArticleListComponent`.
+- Déporte toute la logique de gestion des articles dans `ArticleService`
+- Refactore `ArticleListComponent` afin qu'il n'y ait plus aucun `push`, `slice`, `findIndex`, `localStorage`, `JSON` etc dans ce composant.
+- La manipulation d'article (`push`, `slice` ...) dans le composant `ArticleListComponent` doit uniquement se faire à travers le service `ArticleService`
 
 ## Partie 2
 
-Le component `ArticleListDeletedComponent` n'est pas opérationnel, aucun article supprimé n'est affiché dans le tableau donc il nous est impossible de restaurer un article supprimé par erreur.
+Le composant `ArticleListDeletedComponent` n'est pas opérationnel, aucun article supprimé n'est affiché dans le tableau donc il nous est impossible de restaurer un article supprimé par erreur.
 
-- Injecter le service `ArticleService` dans le component `ArticleListDeletedComponent`.
-- codé la **récupération** des articles supprimés
-- codé la **restauration** des articles supprimés
+- Injectee le service `ArticleService` dans le composant `ArticleListDeletedComponent`.
+- code la **récupération** des articles supprimés
+- code la **restauration** des articles supprimés
 
-**Attention il a peut être d'autres choses à corriger dans le component `ArticleListComponent` et `ArticleListDeletedComponent` ;)**
+**Attention il a peut être d'autres choses à corriger dans le composant `ArticleListComponent` et `ArticleListDeletedComponent` ;)**
 
 ## Keep Calm and Carry On !
