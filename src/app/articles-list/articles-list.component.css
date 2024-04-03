@@ -1,0 +1,10 @@
+.tab-wrapper {
+  height: 500px;
+}
+div {
+  min-height: 100vh;
+}
+
+input {
+  width: 15vw;
+}
