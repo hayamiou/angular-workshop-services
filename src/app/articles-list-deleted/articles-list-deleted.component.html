@@ -1,27 +1,27 @@
 <table class="table table-striped table-hover">
   <thead>
-    <tr>
-      <th scope="col">#</th>
-      <th scope="col">name</th>
-      <th scope="col">price</th>
-      <th scope="col">stock</th>
-      <th scope="col">contact</th>
-      <th scope="col"></th>
-    </tr>
+  <tr>
+    <th scope="col">#</th>
+    <th scope="col">name</th>
+    <th scope="col">price</th>
+    <th scope="col">stock</th>
+    <th scope="col">contact</th>
+    <th scope="col"></th>
+  </tr>
   </thead>
   <tbody>
-    <tr *ngFor="let article of articlesDeleted">
-      <td>{{ article.id }}</td>
-      <td>{{ article.name }}</td>
-      <td>{{ article.price }}</td>
-      <td>{{ article.stock }}</td>
-      <td>{{ article.contact }}</td>
-      <td>
-        <button type="submit" class="btn btn-danger" (click)="restore()">
-          <i class="fas fa-undo"></i>
-        </button>
-      </td>
-    </tr>
+  <tr *ngFor="let article of articlesDeleted">
+    <td>{{ article.id }}</td>
+    <td>{{ article.name }}</td>
+    <td>{{ article.price }}</td>
+    <td>{{ article.stock }}</td>
+    <td>{{ article.contact }}</td>
+    <td>
+      <!-- Passe l'article en paramètre à la méthode restore -->
+      <button type="submit" class="btn btn-danger" (click)="restore(article)">
+        <i class="fas fa-undo"></i>
+      </button>
+    </td>
+  </tr>
   </tbody>
 </table>
-
